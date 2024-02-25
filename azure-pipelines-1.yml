@@ -18,3 +18,8 @@ steps:
     repository: 'vv1'
     command: 'build'
     Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker-credentials'
+    repository: 'vv1'
+    command: 'push'
