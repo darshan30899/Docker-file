@@ -7,14 +7,13 @@ trigger:
    - master
 
 pool:
-  name: linux-box
-  vmImage: linux-box
+  vmImage: ubuntu-latest
 
 steps:
 
 - task: Docker@2
   inputs:
     containerRegistry: 'docker-credentials'
-    repository: 'py1'
+    repository: 'vv1'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
