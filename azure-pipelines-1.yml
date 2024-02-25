@@ -15,10 +15,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'docker-credentials'
-    command: 'login'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'docker-credentials'
-    repository: 'Newimage'
+    repository: 'py1'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
