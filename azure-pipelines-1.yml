@@ -16,5 +16,5 @@ steps:
   inputs:
     containerRegistry: 'docker-credentials'
     repository: 'vv1'
-    command: 'buildAndPush'
+    command: 'build'
     Dockerfile: '**/Dockerfile'
