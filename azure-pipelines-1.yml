@@ -16,14 +16,5 @@ steps:
   inputs:
     containerRegistry: 'myhubpassword'
     repository: 'myrepo'
-    command: 'build'
+    command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'myhubpassword'
-    command: 'login'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'myhubpassword'
-    repository: 'myrepo'
-    command: 'push'
