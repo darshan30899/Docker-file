@@ -32,3 +32,4 @@ steps:
     repository: 'myrepo'
     command: 'push'
     tags: '$(dockerImageTag)'
+    arguments: '--build-arg HTTP_PROXY=http://10.20.30.2:1234 --quiet'
