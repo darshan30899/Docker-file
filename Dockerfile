@@ -1,3 +1,3 @@
-FROM jenkins
+FROM postgres
 
 
