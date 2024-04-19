@@ -17,8 +17,8 @@ stages:
   - job: Build
     displayName: Build
     pool:
-    name: New-agent
-    vmImage: New-agent
+       name: New-agent
+       vmImage: New-agent
     steps:
     - task: Docker@2
       displayName: Build an image
