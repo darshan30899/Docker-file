@@ -19,6 +19,16 @@ steps:
   inputs:
     containerRegistry: 'myhubpassword'
     repository: 'myrepo'
-    command: 'buildAndPush'
+    command: 'build'
     Dockerfile: 'Dockerfile'
+    tags: '$(dockerImageTag)'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'myhubpassword'
+    command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'myhubpassword'
+    repository: 'myrepo'
+    command: 'push'
     tags: '$(dockerImageTag)'
