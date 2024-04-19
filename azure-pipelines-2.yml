@@ -8,8 +8,7 @@ trigger:
 resources:
 - repo: self
 
-variables:
-  tag: '$(Build.BuildId)'
+
 
 stages:
 - stage: Build
@@ -25,6 +24,6 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        dockerfile: 'Dockerfile'
         tags: |
           $(tag)
